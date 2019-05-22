@@ -29,3 +29,6 @@ iOS / Android Movie Discovery App built with React Native
 - 탭 네비게이션이 하는것은 뷰를 바꾸고 맨위에 오게하는것이다.
 - movie, tv, search 는 모두 탭 네비게이션의 자식이다. 하지만 detail 은 형제다.
 - 리엑트 네비게이션은 전부 스택과 탭을 기준으로 돌아간다.
+
+# Important
+- state를 한번에 업데이트 하도록 짠다. let 으로 정의해주고 마지막 finally 에서 setState
