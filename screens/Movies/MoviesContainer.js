@@ -23,7 +23,8 @@ export default class extends React.Component {
       ({
         data: { results: nowPlaying }
       } = await movies.getNowPlaying());
-    } catch {
+    } catch (error) {
+      console.log(error);
       error = "Can't get Movies.";
     } finally {
       this.setState({
@@ -40,9 +41,9 @@ export default class extends React.Component {
     const { loading, upcoming, popular, nowPlaying } = this.state;
     return (
       <MoviesPresenter
-        loading={loading}
         upcoming={upcoming}
         popular={popular}
+        loading={loading}
         nowPlaying={nowPlaying}
       />
     );
