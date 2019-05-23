@@ -1,5 +1,5 @@
-import { Dimension } from "react-native";
+import { Dimensions } from "react-native";
 
-const { width, height } = Dimension.get("screen");
+const { width, height } = Dimensions.get("screen");
 
-export default {};
+export default { width, height };
