@@ -6,6 +6,7 @@ import Layout from "../../constants/Layout";
 import Loader from "../../components/Loader";
 import Section from "../../components/Section";
 import MovieItem from "../../components/MovieItem";
+import NotFound from "../../components/NotFound";
 
 const Container = styled.View`
   flex: 1;
@@ -69,7 +70,9 @@ const SearchPresenter = ({
                     />
                   ))}
               </Section>
-            ) : null
+            ) : tvResults > 0 ? null : (
+              <NotFound />
+            )
           ) : null}
           {tvResults ? (
             tvResults.length > 0 ? (
