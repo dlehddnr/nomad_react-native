@@ -5,7 +5,7 @@ import { withNavigation } from "react-navigation";
 import styled from "styled-components";
 import MoviePoster from "./MoviePoster";
 import MovieRating from "./MovieRating";
-import { TINT_COLOR, GREY_COLOR } from "../constants/Colors";
+import { GREY_COLOR } from "../constants/Colors";
 
 const Container = styled.View`
   align-items: center;
@@ -13,8 +13,8 @@ const Container = styled.View`
 `;
 
 const Title = styled.Text`
-  color: ${TINT_COLOR};
-  font-size: ${props => (props.big ? "14px" : "12px")}
+  color: white;
+  font-size: ${props => (!props.big ? "12px" : "14px")};
   margin-vertical: 5px;
 `;
 
@@ -39,8 +39,8 @@ const MovieItem = ({
   posterPhoto,
   title,
   voteAvg,
-  overview,
   horizontal = false,
+  overview,
   isMovie = true,
   navigation
 }) => (
@@ -51,12 +51,11 @@ const MovieItem = ({
         params: {
           isMovie,
           id,
-          id,
           posterPhoto,
+          backgroundPhoto: null,
           title,
           voteAvg,
-          overview,
-          backgroundPhoto: null
+          overview
         }
       })
     }

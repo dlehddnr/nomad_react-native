@@ -5,7 +5,7 @@ import { withNavigation } from "react-navigation";
 import makePhotoUrl from "../utils/makePhotoUrl";
 import Layout from "../constants/Layout";
 import MoviePoster from "./MoviePoster";
-import { TINT_COLOR, GREY_COLOR, RED_COLOR } from "../constants/Colors";
+import { TINT_COLOR, GREY_COLOR } from "../constants/Colors";
 import MovieRating from "./MovieRating";
 
 const Container = styled.View`
@@ -13,11 +13,18 @@ const Container = styled.View`
   position: relative;
 `;
 
+const BgImage = styled.Image`
+  width: ${Layout.width};
+  height: ${Layout.height / 3};
+  opacity: 0.3;
+  position: absolute;
+`;
+
 const Content = styled.View`
   flex: 1;
   flex-direction: row;
-  padding-horizontal: 30px;
   align-items: center;
+  padding-horizontal: 30px;
   justify-content: space-between;
 `;
 
@@ -38,25 +45,18 @@ const Overview = styled.Text`
   margin-bottom: 10px;
 `;
 
-const BgImage = styled.Image`
-  width: ${Layout.width};
-  height: ${Layout.height / 3};
-  opacity: 0.3;
-  position: absolute;
-`;
-
 const VoteContainer = styled.View`
-  margin: 10px 0;
+  margin: 10px 0px;
 `;
 
 const BtnContainer = styled.TouchableOpacity`
-  background-color: ${RED_COLOR};
-  padding: 5px;
-  border-radius: 2.5px;
+  background-color: #e74c3c;
+  border-radius: 5px;
+  padding: 8px;
 `;
 
 const BtnText = styled.Text`
-  color: ${TINT_COLOR};
+  color: white;
   font-size: 12px;
 `;
 
@@ -103,7 +103,7 @@ const MovieSlide = ({
             })
           }
         >
-          <BtnText>More Detail</BtnText>
+          <BtnText>View details</BtnText>
         </BtnContainer>
       </Column>
     </Content>
