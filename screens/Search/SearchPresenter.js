@@ -44,7 +44,7 @@ const SearchPresenter = ({
         onChangeText={handleSearchUpdate}
         value={searchTerm}
         returnKeyType="search"
-        placeholder="Search movies and tv"
+        placeholder="검색어를 입력하세요"
         placeholderTextColor={GREY_COLOR}
         onSubmitEditing={onSubmitEditing}
       />
@@ -56,7 +56,7 @@ const SearchPresenter = ({
         <>
           {movieResults ? (
             movieResults.length > 0 ? (
-              <Section title="Movie Results">
+              <Section title="영화 검색결과">
                 {movieResults
                   .filter(movie => movie.poster_path !== null)
                   .map(movie => (
@@ -76,7 +76,7 @@ const SearchPresenter = ({
           ) : null}
           {tvResults ? (
             tvResults.length > 0 ? (
-              <Section title="TV Results">
+              <Section title="드라마 검색결과">
                 {tvResults
                   .filter(tv => tv.poster_path !== null)
                   .map(tv => (

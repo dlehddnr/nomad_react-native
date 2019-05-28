@@ -17,7 +17,7 @@ const TVPresenter = ({ loading, popular, airingThisWeek, airingToday }) =>
   ) : (
     <Container>
       {airingToday ? (
-        <Section title="Airing Today">
+        <Section title="오늘 방영">
           {airingToday
             .filter(tv => tv.poster_path !== null)
             .map(tv => (
@@ -33,7 +33,7 @@ const TVPresenter = ({ loading, popular, airingThisWeek, airingToday }) =>
         </Section>
       ) : null}
       {popular ? (
-        <Section title="Popular">
+        <Section title="인기작">
           {popular
             .filter(tv => tv.poster_path !== null)
             .map(tv => (
@@ -49,7 +49,7 @@ const TVPresenter = ({ loading, popular, airingThisWeek, airingToday }) =>
         </Section>
       ) : null}
       {airingThisWeek ? (
-        <Section title="Airing This Week">
+        <Section title="이번주 방영작">
           {airingThisWeek
             .filter(tv => tv.poster_path !== null)
             .map(tv => (
